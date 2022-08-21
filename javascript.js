@@ -45,13 +45,18 @@ function startGame(playerSelection, computerSelection) {
 for (let i = 0; i < 5; i++) {
   getComputerChoice();
   startGame();
+  if (i == 4) {
+    isFiveRound();
+  }
 }
 
 //takes after the 5 rounds the user and pc and decides if who won or if it is a tie
-if (user > pc) {
-  return "You Won";
-} else if (pc > user) {
-  return "You Lose!";
-} else {
-  return "It`s a tie!";
+function isFiveRound() {
+  if (user > pc) {
+    return "You Won";
+  } else if (pc > user) {
+    return "You Lose!";
+  } else {
+    return "It`s a tie!";
+  }
 }
